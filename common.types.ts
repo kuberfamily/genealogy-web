@@ -1,3 +1,4 @@
+import { Session, User } from "next-auth"
 import { MouseEventHandler, ReactNode } from "react"
 
 export type showtitleOnhoverProps = {
@@ -16,4 +17,13 @@ export type sidebarIconProps = {
     isActive: boolean;
     href: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
+}
+
+export interface SessionInterface extends Session {
+    user: User & {
+        id: string;
+        name: string;
+        avatarUrl: string;
+        email: string;
+    };
 }
