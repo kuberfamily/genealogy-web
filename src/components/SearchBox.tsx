@@ -5,7 +5,7 @@ import { HiSearch } from "react-icons/hi";
 
 const SearchBox = () => {
   const navigate = useRouter();
-
+  console.log(Math.floor(Date.now() / 1000) + 60 * 60);
   const handleClick = () => {
     navigate.push("/search");
   };
